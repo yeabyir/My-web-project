@@ -1,0 +1,36 @@
+<html>
+  <head>
+  <title> Login Page</title>
+  <link rel="stylesheet" type="text/css" href="style3.css">
+  <link rel="stylesheet" type="text" href="signup.html">
+</head> 
+<body>
+  <div class="card">
+    <h1>Welcome Back!</h1>
+    <div class="bg"></div>
+    <div class="blob"></div>
+    <form id="loginform">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+</div>
+<script>
+  document.getElementById("loginform").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const username=document.getElementById("username").value;
+  const password=document.getElementById("password").value;
+
+  console.log("username:",username);
+  console.log("password:",password);
+
+  alert("submitted Successfully!");
+  })
+</script>
+</body>
+</html>

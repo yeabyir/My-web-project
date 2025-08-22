@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>doc</title>
+</head> 
+<style>
+  body{
+    display: flex;
+    align-items:last baseline;
+    justify-content: center;
+    flex-direction: column;
+  }
+  label{
+    position: relative;
+    width: 100px;
+    height: 20px;
+    display: block;
+    background: #d9d9d9;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3),inset 0px -5px 15px rgba(0,0,0,0.3); 
+  }
+  label::after{
+    content:"";
+    position: absolute;
+    background: #f2f2f2;
+    top: 10px;
+    left: 10px;
+    transform: 0.5s;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    }
+  input:checked label::after{
+    left: 470px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+  }
+  input:checked label{
+    background: #242424;
+  }
+  .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  input:checked + label+.background{
+    background: #242424;
+  }
+  input{
+    display: none;
+  }
+  </style>
+<body>
+<input type="checkbox" id="dark-mode">
+<label for="dark-mode"></label>
+<div class="background"></div>
+</body>
+</html>

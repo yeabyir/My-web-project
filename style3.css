@@ -1,0 +1,132 @@
+body {
+    background-image: url("e.png");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+#username, #password {
+    width: 200px;
+    height: 30px; 
+    padding: 10px; 
+    margin-bottom: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    font-size: 16px; 
+}
+#username:focus, #password:focus {
+    border-color: #007bff; 
+    outline: none; 
+    box-shadow: 0 0 5px #007bff; 
+}
+.card {
+    width: 300px;
+    height: 350px;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #170101, -20px -20px 60px #0a0a0a;
+    background-color: rgba(154, 194, 179, 0.719); 
+}
+button {
+    margin-top: 20px; 
+}
+.card form {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+   button:hover {
+    position: center;
+    border-radius: 50px;
+    background: #03652fbb;
+    box-shadow:  5px 5px 5px #013f02d0,
+            
+}
+    .bg {
+    position: center;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    background: rgba(11, 11, 11, 0.858);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+}
+
+.blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    background-color: #1a1716cb;
+    opacity: 4;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+}
+.signup {
+    box-shadow: 20px 20px 60px #170101, -20px -20px 60px #0a0a0a;
+    height: 250px;
+    width: 300px;
+    position: absolute;
+    border-radius: 14px;
+    background-color: rgba(154, 194, 179, 0.719);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    }
+#user, #pass {
+    width: 200px;
+    height: 30px; 
+    padding: 10px; 
+    margin: auto;
+    border: 1px solid #19191ac4; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    font-size: 16px; 
+    }
+    .signup form {
+        position: relative;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+@keyframes blob-bounce {
+    0% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+    50% {
+      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+    75% {
+      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+    100% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+}
+
+/* New code to exclude the form from the filter */
+.card form {
+    position: relative;
+    z-index: 3;
+}
