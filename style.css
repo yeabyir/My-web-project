@@ -1,32 +1,89 @@
-/* Basic styling for the tour website */
-
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
-  }
-  .head{
+}
+
+.head {
     height: 75px;
-  }
-  body {
+    background: #01070af8;
+    color: #fff;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+body {
     font-family: "Cooper Black";
-    line-height: 1.6; 
-  }
-  .welcome {
-    font-family:Arial, Helvetica, sans-serif;
-  }
-  p{    
-    font-family:"Cooper Black";
-  }
-  a{
+    line-height: 1.6;
+    padding-top: 75px; /* Prevents content from hiding behind fixed header */
+}
+
+/* FIXED NAVIGATION LAYOUT */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; /* This creates space between brand and nav items */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 75px;
+}
+
+/* Brand on the left */
+#brand {
+    margin-right: auto; /* Pushes other items to the right */
+    padding: 0;
+}
+
+#brand a {
+    color: rgba(232, 241, 232, 0.982);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transition-duration: 0.5s;
+    padding: 30px 0; /* Vertical padding only */
+}
+
+/* Navigation items on the right */
+nav ul li:not(#brand) {
+    display: inline-block;
+    margin-right: 0;
+    padding: 30px 15px; /* Reduced horizontal padding */
+    margin-left: 10px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: #f1e9e9;
+    text-decoration: none;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+nav ul li a:hover {
+    color: rgba(206, 219, 220, 0.824);
+    font-weight: bolder;
+}
+
+/* Rest of your existing CSS remains the same */
+.welcome {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: "Cooper Black";
+}
+
+a {
     text-decoration: none;
     color: #f6f3f3;
-  }
-  .btn:hover{
-    text-decoration:underline;
-  }
-  
-  button{
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+button {
     background-color: rgb(16, 43, 71);
     color: #fff;
     border-radius: 5px;
@@ -34,126 +91,97 @@
     margin-top: 20px;
     border: #076a98 solid;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
 
-  }
-  button:hover{
-width: 200px;
-background-color: rgb(7, 27, 79);
-width: 100px;
-color: #fff;
-
-  }
-  header {
-    background: #01070af8;
+button:hover {
+    width: 200px;
+    background-color: rgb(7, 27, 79);
+    width: 100px;
     color: #fff;
-    padding: 10px;
-  }
-#brand a{
-  color: rgba(232, 241, 232, 0.982);
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  transition-duration: 0.5s;
-}  
-  nav ul {
-    list-style-type: none;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 30px;
-  }
-  
-  nav ul li a {
-    color: #f1e9e9;
-    text-decoration: none;
-  }
-  #line{
-    float: right;
-    font-family:Arial, Helvetica, sans-serif
-  }
- 
- a:hover{
-    color: rgba(206, 219, 220, 0.824);
-    font-weight: bolder;
- }
-  
-  .welcome {
-    background-size:cover;
+}
+
+.welcome {
+    background-size: cover;
     background-image: url("https://cdn.wallpapersafari.com/78/75/fKVUrC.jpg");
     text-align: center;
     padding: 150px;
-    font-size:medium;
+    font-size: medium;
     color: #020224;
     margin: 0px;
-    text-decoration:wavy;
-  }
-  h2{
+    text-decoration: wavy;
+}
+
+h2 {
     color: rgba(219, 214, 214, 0.893);
     margin-bottom: 5px;
     margin-top: 0px;
     font-size: 40px;
     background-color: rgba(0, 11, 16, 0.817);
-     }
-  
-  .tours {
+}
+
+.tours {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-image: url("https://wallpaperaccess.com/full/1567666.png");
     margin: 0px;
     text-align: center;
     background-color: rgb(65, 71, 69);
-   color: #fff; 
-  }
-  
-  .tour-card {
+    color: #fff;
+}
+
+.tour-card {
     display: inline-block;
     position: relative;
     width: 290px;
     margin-bottom: 100px;
     margin-right: 50px;
-    text-align: center;  
-  }
-  .tour-card img {
+    text-align: center;
+}
+
+.tour-card img {
     width: 100%;
     height: 185px;
     border-radius: 10px;
-  }
-  .tour-card img:hover{
+}
+
+.tour-card img:hover {
     width: 110%;
     height: auto;
     border-radius: 40px;
     transition-duration: 0.5s;
-  }
+}
 
-   .video{
-  background-image:url("https://wallpaperaccess.com/full/1567666.png") ;
-  position: sticky;
-  left: 500px;
-  }
-  .Newsletter{
+.video {
     background-image: url("https://wallpaperaccess.com/full/1567666.png");
-  }
-  .contact{
+    position: sticky;
+    left: 500px;
+}
+
+.Newsletter {
     background-image: url("https://wallpaperaccess.com/full/1567666.png");
-  }
-  footer {
+}
+
+.contact {
+    background-image: url("https://wallpaperaccess.com/full/1567666.png");
+}
+
+footer {
     background-image: url("https://wallpaperaccess.com/full/1567666.png");
     color: #fff;
     padding: 10px;
     text-align: center;
-  }
-   
-  footer ul li {
+}
+
+footer ul li {
     display: inline-block;
     margin-right: 10px;
     padding: 25px;
-  }
-  @media screen and (max-width:100px) {
-    .tour-card{
+}
+
+@media screen and (max-width: 100px) {
+    .tour-card {
         width: 500px;
     }
-    .tour-card #tour1{
+    .tour-card #tour1 {
         height: auto;
-      }
-  }
-  
+    }
+}
